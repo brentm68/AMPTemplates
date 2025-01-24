@@ -1,4 +1,4 @@
-Meta.DisplayName=Sons Of The Forest
+Meta.DisplayName=Sons Of The Forest Rewrite
 Meta.Description=Sons Of The Forest Dedicated Server
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
@@ -30,7 +30,7 @@ App.LinuxCommandLineArgs=-a wine "./SonsOfTheForestDS.exe"
 App.WindowsCommandLineArgs=
 App.CommandLineArgs={{$PlatformArgs}} -dedicatedserver.IpAddress "{{$ApplicationIPBinding}}" -dedicatedserver.GamePort "{{$GamePort}}" -dedicatedserver.QueryPort "{{$SteamQueryPort}}" -dedicatedserver.BlobSyncPort "{{$BlobSyncPort}}" -userdatapath "{{$FullBaseDir}}saves" {{$FormattedArgs}}
 App.UseLinuxIOREDIR=False
-App.EnvironmentVariables={"LD_LIBRARY_PATH":"./linux64:%LD_LIBRARY_PATH%","SteamAppId":"1326470","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all"}
+App.EnvironmentVariables={"LD_LIBRARY_PATH":"./linux64:%LD_LIBRARY_PATH%","SteamAppId":"1326470","WINEPREFIX":"{{$FullRootDir}}.wine","WINEARCH":"win64","WINEDEBUG":"-all","WINDLLOVERRIDES":"version=n,b"}
 App.CommandLineParameterFormat=-{0} "{1}"
 App.CommandLineParameterDelimiter= 
 App.ExitMethod=OS_CLOSE
